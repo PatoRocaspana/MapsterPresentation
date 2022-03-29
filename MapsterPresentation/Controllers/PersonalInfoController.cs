@@ -26,9 +26,9 @@ namespace MapsterPresentation.Controllers
             if (employees == null)
                 return NotFound();
 
-            var employeesDto = employees.Adapt<List<PersonalInfoDto>>();
+            var personalInfoDtos = employees.Adapt<List<PersonalInfoDto>>();
 
-            return Ok(employeesDto);
+            return Ok(personalInfoDtos);
         }
     }
 }
