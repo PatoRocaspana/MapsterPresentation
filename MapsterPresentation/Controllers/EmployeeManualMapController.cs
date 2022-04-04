@@ -38,7 +38,8 @@ namespace MapsterPresentation.Controllers
                     Id = entity.Car.Id,
                     Brand = entity.Car?.Brand,
                     Model = entity.Car?.Model,
-                    Year = entity.Car.Year
+                    Year = entity.Car.Year,
+                    IsOwner = entity.Car.IsOwner
                 }
             }).ToList();
 
