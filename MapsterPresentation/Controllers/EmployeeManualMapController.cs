@@ -25,22 +25,21 @@ namespace MapsterPresentation.Controllers
             if (employees == null)
                 return NotFound();
 
-            var employeesDto = employees.Select(entity => new EmployeeDto()
+            var employeesDto = employees.Select(entity => new EmployeeDto
             {
                 Id = entity.Id,
-                FirstName = entity.FirstName,
-                LastName = entity.LastName,
+                FirstName = entity?.FirstName,
+                LastName = entity?.LastName,
                 BirthDate = entity.BirthDate,
                 Childs = (byte)entity.Childs,
                 RoleId = entity.Role.Id,
-                Car = new CarDto()
+                Car = new CarDto
                 {
                     Id = entity.Car.Id,
-                    Brand = entity.Car.Brand,
-                    Model = entity.Car.Model,
+                    Brand = entity.Car?.Brand,
+                    Model = entity.Car?.Model,
                     Year = entity.Car.Year
                 }
-
             }).ToList();
 
             return Ok(employeesDto);

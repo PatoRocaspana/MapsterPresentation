@@ -31,7 +31,7 @@ TypeAdapterConfig<Employee, PersonalInfoDto>.NewConfig()
         src => $"The {src.Car.Model} belongs to the company", 
         srcCond => srcCond.Car.IsOwner == false)
 
-    .AfterMapping(dest => dest.FitToRetire = dest.Age >= 65);
+    .AfterMapping(dest => dest.CanRetire = dest.Age >= 65);
 
 var app = builder.Build();
 
