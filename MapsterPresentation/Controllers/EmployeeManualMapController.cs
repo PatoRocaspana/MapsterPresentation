@@ -31,7 +31,7 @@ namespace MapsterPresentation.Controllers
                 FirstName = entity?.FirstName,
                 LastName = entity?.LastName,
                 BirthDate = entity.BirthDate,
-                Childs = (byte)entity.Childs,
+                Children = (byte)entity.Children,
                 RoleId = entity.Role.Id,
                 Car = new CarDto
                 {
